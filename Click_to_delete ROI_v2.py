@@ -27,7 +27,7 @@
 #     2. **Run the Script:**
 #         - Navigate to `Plugins > Scripting > New > Python` in Fiji/ImageJ.
 #         - Paste this script into the Script Editor.
-#         - Click the "Run" button (green ▶️ icon).
+#         - Click the "Run" button.
 #
 #     3. **Using the GUI:**
 #         - A small window titled "RoiClickListener Control" will appear with three buttons:
