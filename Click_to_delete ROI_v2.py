@@ -1,3 +1,57 @@
+# -----------------------------------------------------------------------------
+# Script Name: Click-to-Delete ROI and Bulk Delete within Selection
+# Description: 
+#     This script enhances ROI (Region of Interest) management in Fiji/ImageJ by
+#     providing two main functionalities:
+#         1. **Click-to-Delete:** Allows users to delete individual ROIs by
+#            left-clicking directly on them.
+#         2. **Bulk Delete Within Selection:** Enables users to delete multiple ROIs
+#            by drawing a rectangular selection around the desired area encompassing
+#            the ROIs to be removed.
+#
+# Features:
+#     - Activate and deactivate the click-to-delete listener using GUI buttons.
+#     - Confirmation dialogs to prevent accidental deletions.
+#     - Logging of actions for transparency and debugging purposes.
+#
+# Requirements:
+#     - Fiji/ImageJ with Python (Jython) scripting support.
+#     - ROIs added to the ROI Manager.
+#
+# Usage Instructions:
+#     1. **Load Image and ROIs:**
+#         - Open your image in Fiji/ImageJ.
+#         - Draw ROIs using any ROI tool (e.g., Rectangle, Oval).
+#         - Add ROIs to the ROI Manager via `Analyze > Tools > ROI Manager` or by clicking the "Add" button.
+#
+#     2. **Run the Script:**
+#         - Navigate to `Plugins > Scripting > New > Python` in Fiji/ImageJ.
+#         - Paste this script into the Script Editor.
+#         - Click the "Run" button (green ▶️ icon).
+#
+#     3. **Using the GUI:**
+#         - A small window titled "RoiClickListener Control" will appear with three buttons:
+#             - **Activate Listener:** Enables the click-to-delete functionality.
+#             - **Deactivate Listener:** Disables the click-to-delete functionality.
+#             - **Delete ROIs Within Selection:** Deletes all ROIs entirely within a drawn rectangle.
+#
+#     4. **Deleting Individual ROIs:**
+#         - Click the "Activate Listener" button.
+#         - Left-click on any ROI in the image to prompt deletion.
+#
+#     5. **Deleting Multiple ROIs:**
+#         - Select the Rectangle Selection Tool from the toolbar.
+#         - Draw a rectangle around the area containing the ROIs you wish to delete.
+#         - Click the "Delete ROIs Within Selection" button in the GUI.
+#
+#     6. **Stopping the Listener:**
+#         - Click the "Deactivate Listener" button to stop the click-to-delete functionality.
+#
+# Author: Jalal Al Rahbani
+# Date: January 9, 2025
+# Version: 1.0
+# -----------------------------------------------------------------------------
+
 from ij import IJ
 from ij.plugin.frame import RoiManager
 from java.awt.event import MouseAdapter, MouseEvent
