@@ -1,5 +1,4 @@
 # -----------------------------------------------------------------------------
-# Script Name: Click-to-Delete ROI and Bulk Delete within Selection
 # Description: 
 #     This script enhances ROI (Region of Interest) management in Fiji/ImageJ by
 #     providing two main functionalities:
